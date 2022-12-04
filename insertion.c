@@ -1,4 +1,4 @@
-// creating and traveesion linked list
+// creating and traveesion and insertion  linked list
 
 #include <Stdio.h>
 #include <stdlib.h>
@@ -57,13 +57,13 @@ struct L1 *end_insertion(struct L1 *head, int value)
 {
 
     struct L1 *newend = (struct L1 *)malloc(sizeof(struct L1));
-      struct L1 *p = head;
-      while (p->next!=NULL)
+            
+      while (head->next!=NULL)
       {
-        p=p->next;
+        head=head->next;
       }
       newend->data = value;
-      p->next=newend;
+      head->next=newend;
       newend->next= NULL;
      
        return head;
@@ -82,7 +82,7 @@ struct L1 *after_insertion(struct L1 *head, struct L1  *previous , int value)
     
 
      
-       return head;
+       return newend;
 
 }
 
